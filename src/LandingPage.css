@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
+.landing-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    background-color: #fff; 
+}
+
+.brand-logo img {
+    width: 150px; 
+    margin-bottom: 30px;
+}
+
+.brand-name {
+    font-size: 3em;
+    font-family: 'Lemon';
+    font-weight: bold;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.search-button,
+.ingredients-button {
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #ff7f50; 
+    transition: background-color 0.3s;
+    align-items: center;
+    display: block;
+    color: white;
+    
+    
+}
+
+    .search-button:hover,
+    .ingredients-button:hover {
+        background-color: #e0e0e0;
+    }

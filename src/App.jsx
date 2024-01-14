@@ -1,19 +1,26 @@
-import { useEffect, useState } from 'react';
-import './App.css';
-import RandomCocktail from './RandomCocktail';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import LandingPage from './LandingPage';
+import SearchPage from './SearchPage';
+import CocktailDetails from './CocktailDetails';
+import AddIngredientsPage from './AddIngredients';
+import CocktailSuggestionsPage from './CocktailSuggestions';
 
-function App() {
-//Write constant expressions here
 
+const App = () => {
     return (
-        //Display on page here
-        <>
-            <h1>Welcome</h1>
-            <RandomCocktail/>
-        </>
+        <Router>
+            
+            <Routes>
+                <Route path="/" element={<LandingPage />} />
+                <Route path="/search" element={<SearchPage />} />
+                <Route path="/cocktail/:id" element={<CocktailDetails />} />
+                <Route path="/add-ingredients" element={<AddIngredientsPage />} />
+                <Route path="/cocktail-suggestions" element={<CocktailSuggestionsPage />} />
+            </Routes>
+            
+        </Router>
     );
-    
-   
-}
+};
 
 export default App;

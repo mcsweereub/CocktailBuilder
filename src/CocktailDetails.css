@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300&display=swap');
+
+.cocktailDetailContainer {
+    display: flex;
+    margin: 20px;
+    align-items: flex-start;
+}
+
+.cocktailImageContainer {
+    flex: 0 0 50%; 
+    max-width: 100%; 
+    position: relative; 
+    padding: 10px; 
+}
+
+.cocktailImageDetails {
+    width: 100%; 
+    height: auto;
+    border-radius: 1%;
+    border: 2px solid;
+    padding: 2px;
+}
+
+.cocktailInfoContainer {
+    flex: 3;
+    overflow: auto;
+    padding: 20px;
+    
+}
+
+.cocktailTitle, .cocktailCategory, .cocktailInstructions, .cocktailGlass, .cocktailIngredientsTitle {
+    color: black;
+    padding: 5px;
+    font-family: 'Raleway';
+}
+
+.cocktailInfoContainer strong {
+    color: #ff7f50; 
+}
+
+.cocktailTitle{
+    font-size: 3em;
+}
+
+.cocktailIngredientsList {
+    list-style-type: none;
+    padding: 10px;
+    font-family: 'Raleway';
+}
+
+.cocktailIngredientItem {
+    //background-color: #ff7f50;
+    margin-bottom: 5px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+@media (max-width: 1200px) {
+    .cocktailDetailContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cocktailImageContainer {
+        position: static; 
+        margin-left: 0; 
+        flex: 0 0 auto; 
+    }
+
+    .cocktailInfoContainer {
+        margin-left: 0; 
+        width: 100%; 
+    }
+}

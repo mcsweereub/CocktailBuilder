@@ -4,10 +4,10 @@ const RandomCocktail = () => {
     const [cocktail, setCocktail] = useState(null);
 
     useEffect(() => {
-        fetch('https://www.thecocktaildb.com/api/json/v1/1/random.php')
+        fetch('https://www.thecocktaildb.com/api/json/v2/9973533/random.php')
             .then((response) => response.json())
             .then((data) => {
-                // The API returns an array of drinks, we'll take the first one
+                
                 setCocktail(data.drinks[0]);
             })
             .catch((error) => {

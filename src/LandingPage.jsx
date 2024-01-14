@@ -1,24 +1,26 @@
 import React from 'react';
-import './LandingPage.css'; // Make sure to create a corresponding CSS file for styling
+import { useNavigate } from 'react-router-dom'; 
+import './LandingPage.css';
+import CocktailIcon from './images/CocktailIcon.png';
 
 const LandingPage = () => {
+    const navigate = useNavigate(); 
+
     const handleSearch = () => {
-        // Implement your search logic or redirect to search page
-        console.log('Search for cocktails!');
+        navigate('/search'); // Navigate to the search page
     };
 
     const handleAddIngredients = () => {
-        // Implement your add ingredients logic or redirect to ingredients page
-        console.log('Add ingredients!');
+        navigate('/add-ingredients'); // Navigate to Add Ingredients page
     };
+
 
     return (
         <div className="landing-page">
             <div className="brand-logo">
-                {/* Replace src with your actual logo image path */}
-                <img src="/path-to-your-logo.png" alt="MixMatch Logo" />
+                <img src={CocktailIcon} alt="Cocktail Icon" />
             </div>
-            <div className="brand-name">MixMatch</div>
+            <div className="brand-name">MIXMATCH</div>
             <div className="button-container">
                 <button onClick={handleSearch} className="search-button">
                     Search for Cocktails
